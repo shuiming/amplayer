@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/img_guide_background" >
+
+    <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pager"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/play_panel"
+    tools:context=".MusicListActivity" />
+
+    <RelativeLayout  
+        android:layout_width="fill_parent"   
+        android:layout_height="50dp" 
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/play_panel">
+
+    <Button
+        android:id="@+id/button_play_panel_play"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/img_appwidget_play"
+        android:onClick="onClick" />
+
+    <TextView
+        android:id="@+id/textView_play_panel_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imageView_music_picture2"
+        android:layout_toLeftOf="@+id/button_play_panel_play"
+        android:layout_alignParentTop="true"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:clickable="true"
+        android:onClick="onClick" />
+    
+    <TextView
+        android:id="@+id/textView_play_panel_artist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imageView_music_picture2"
+        android:layout_toLeftOf="@+id/button_play_panel_play"
+        android:layout_below="@+id/textView_play_panel_title"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:clickable="true"
+        android:onClick="onClick" />
+
+    <ImageView
+        android:id="@+id/imageView_music_picture2"
+        android:layout_width="50dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:src="@drawable/ic_launcher" />
+    
+    </RelativeLayout>
+    
+
+</RelativeLayout>
